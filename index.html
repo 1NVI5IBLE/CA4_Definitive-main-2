@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />   
+    <script src="script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div id="navbar">
+        <div id="dropdowns">
+          <ul class="dropdown-contents">
+            <p>PhotoBooth</p>
+          </ul>
+        </div>
+        <ul class="contents">
+          <li><a id="navcontents" href="">Canvas</a></li>
+        </ul>
+      </div>
+    </header>
+    <div id="container">
+
+
+      <div id="buttonContents">
+        <div> 
+          <a id="buttonStyle"  style="--clr:#1e9bff" download="image.png" onclick="this.href = canvas.toDataURL('image/png')">Save Image</a>
+        </div>
+      </div>
+
+      <div class="canvasContainer">
+        <canvas id="canvas" width="500" height="500"></canvas>
+      </div>
+
+
+      <div id="buttonContents2">
+        <button id="buttonStyle">Restore</button>
+      </div>
+    </div>
+    <!--
+    <div id="sidebar">
+      <label class="Red" for="brightnesRed">Red:</label>
+      <input type="range" id="brightnesRed" value="0" min="-255" max="255" onchange="updateBrightnesLevel()">
+
+      <label class="Green" for="brightnesGreen">Green:</label>
+      <input type="range" id="brightnesGreen" value="0" min="-255" max="255" onchange="updateBrightnesLevel()">
+
+      <label class="Blue" for="brightnesBlue">Blue:</label>
+      <input type="range" id="brightnesBlue" value="0" min="-255" max="255" onchange="updateBrightnesLevel()">
+    </div>
+-->
+
+<div class="editor">
+
+<div class="contents1">
+    <div> Image Filters <br>
+      <label>Brightness</label><input type="range" value="0" min="-255" max="255" onchange="setBrightness(this.value)" /><br/>
+      <label>Greyscale</label><input type="checkbox" onchange="toggleGreyscale(this.checked)" /><br> 
+      Sepia <br> 
+      <label>Invert</label><input type="checkbox" onchange="invert(this.checked)" /><br>  
+      Posterise <br>
+    </div>
+</div>
+
+<div class="contents2">
+    <div> 
+      <label for="brightnessRed">Red</label><input type="range" id="brightnessRed" class="sliderDesign" value="0" min="-255" max="255" onchange = "setBrightnessRed(this.value)"/>
+      <label for="brightnessGreen">Green</label><input type="range" id="brightnessGreen" class="sliderDesign" value="0" min="-255" max="255" onchange = "setBrightnessGreen(this.value)">
+      <label for="brightnessBlue">Blue</label><input type="range" id="brightnessBlue" class="sliderDesign" value="0" min="-255" max="255" onchange = "setBrightnessBlue(this.value)"/>
+    </div>
+</div>
+
+
+
+
+
+<div class="contents3">
+    <div>
+      <label>Rotate</label><input type="range" class="sliderDesign" value="0" min="0" max="360" onchange="setRotationDegrees(this.value)" /><br/>
+    </div>
+</div>
+
+
+</div>
+    
+    
+  </body>
+
+</html>
